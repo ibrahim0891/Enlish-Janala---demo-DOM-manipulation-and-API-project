@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>English Janala</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/index.min.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/ring.js"></script>
+
+
+        <link rel="stylesheet" href="./style.css">
+
+        <style type="text/tailwindcss">
+            @theme{
+                --color-sky : #00bcff; 
+                --color-purple : #422ad5;
+            }
+            @layer components{ 
+                .bounce {
+                    @apply transition-all duration-100 active:scale-90;
+                }
+            }
+        
+        </style>
+
+    </head>
+
+    <body class="bg-white">
+        <!-- nav bar  -->
+        <nav
+            class="flex items-center justify-between max-w-[1760px] p-6 lg:py-7 lg:px-12  m-auto bg-sky-50 border-b border-gray-200 sticky top-0 z-20">
+            <div class="flex items-center justify-center space-x-4">
+                <img class="w-14" src="./assets/logo.png" alt="">
+                <div class="flex flex-col items-baseline gap-0">
+                    <h2 class="text-2xl font-semibold"> English Janala</h2>
+                    <span class="font-bangla text-sm"> by programming-hero </span>
+                </div>
+            </div>
+            <span class="text-3xl md:hidden" onclick="openSidebar()" > <i class="ph ph-list"></i></span>
+            <div id="sidebar" class="space-x-4 transition-all fixed md:static top-0 right-0  h-full md:h-auto bg-white z-20 w-0 md:w-auto overflow-hidden md:overflow-auto  ">
+                <div class="p-12 flex flex-col gap-4 md:flex-row md:p-0 ">
+                    <div class="md:hidden text-xl flex items-center justify-between mb-4" onclick="closeSidebar()">
+                        <p class=" font-bold">Menu</p>  <i class="ph-x"></i>
+                    </div>
+                    <a href="#faq" class="w-full block">
+                        <button class="btn btn-primary btn-outline w-full"> <i class="text-lg ph-question-fill" /></i> FAQ</button>
+                    </a>
+                    <a href="#learn" class="w-full block">
+                        <button class="btn btn-primary btn-outline w-full"> <i class="text-lg ph-book-open-fill"></i> Learn</button>
+                    </a>
+                    <a href="https://www.google.com" class="w-full block">
+                        <button class="btn btn-primary btn-outline w-full"> <i class="text-lg ph-sign-out"></i> Logout</button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="max-w-[1378px] m-auto">
+
+
+            <!-- banner section  -->
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center p-6 md:p-12  text-center md:text-left">
+                <div class="space-y-4">
+                    <h1 class="text-5xl font-bold"> <span class="text-sky">English</span> is Easy!!</h1>
+                    <p class="font-bangla leading-loose">
+                        আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান,
+                        আমাদের
+                        Interactive Lessons
+                        আপনাকে নিয়ে যাবে অন্য একটি Level এ
+                    </p>
+                    <form class="space-y-4 md:space-y-2">
+                        <input type="text" class="input" placeholder="Enter your name">
+                        <input type="password" name="" id="" class="input" placeholder="hello world">
+                        <button class="btn btn-primary  text-white block rounded-full md:rounded-md m-auto md:m-0 r">
+                            Get
+                            Started</button>
+                    </form>
+                </div>
+                <div>
+                    <img src="./assets/hero-student.png" alt="" srcset="">
+                </div>
+            </div>
+
+            <!-- learn vocabulary section  -->
+            <div class="my-12 md:my-32 space-y-6 px-6 md:px-12 text-center" id="learn">
+                <h3 class="text-4xl font-semibold text-center "> <span class="text-sky"> Let's</span> Learn Vocabularies
+                </h3>
+                <div class="space-x-2 flex  overflow-auto " id="lesson-button-container">
+                    <button class="btn btn-primary btn-outline bounce"><i class="text-lg ph-book-open-fill"></i>Lesson -
+                        1</button>
+                    <button class="btn btn-primary btn-outline bounce"><i class="text-lg ph-book-open-fill"></i>Lesson -
+                        2</button>
+                    <button class="btn btn-primary btn-outline bounce"><i class="text-lg ph-book-open-fill"></i>Lesson -
+                        3</button>
+                    <button class="btn btn-primary btn-outline bounce"><i class="text-lg ph-book-open-fill"></i>Lesson -
+                        4</button>
+                    <button class="btn btn-primary btn-outline bounce"><i class="text-lg ph-book-open-fill"></i>Lesson -
+                        5</button>
+                    <button class="btn btn-primary btn-outline bounce"><i class="text-lg ph-book-open-fill"></i>Lesson -
+                        6</button>
+                    <button class="btn btn-primary btn-outline bounce"><i class="text-lg ph-book-open-fill"></i>Lesson -
+                        7</button>
+                </div>
+
+                <div id="word-card-container" class="font-bangla"> /div>
+
+                </div>
+
+                <!-- frequently asked anser and question - fuck  -->
+                <div class=" py-6 text-left md:py-12" id="faq">
+                    <h3 class="text-4xl font-semibold text-center">
+                        <span class="text-sky">Frequently</span> Asked Questions
+                    </h3>
+                    <div class="my-8 lg:my-20 space-y-4">
+
+                        <div tabindex="0" class="collapse collapse-plus bg-base-100 border-base-300 border">
+                            <div class="collapse-title font-semibold">How can I start learning English on this website?
+                            </div>
+                            <div class="collapse-content text-sm">
+                                You can start by exploring our beginner lessons, interactive exercises, and quizzes. We
+                                also
+                                offer
+                                structured courses to guide you step by step.
+                            </div>
+                        </div>
+
+                        <div tabindex="0" class="collapse collapse-plus bg-base-100 border-base-300 border">
+                            <div class="collapse-title font-semibold">Is this website free to use?</div>
+                            <div class="collapse-content text-sm">
+                                Yes, the basic lessons and exercises are free. We also provide premium plans with
+                                additional
+                                features.
+                            </div>
+                        </div>
+
+                        <div tabindex="0" class="collapse collapse-plus bg-base-100 border-base-300 border">
+                            <div class="collapse-title font-semibold">Do I need to create an account?</div>
+                            <div class="collapse-content text-sm">
+                                An account isn’t required for browsing free lessons, but registering will allow you to
+                                track
+                                progress
+                                and save results.
+                            </div>
+                        </div>
+
+                        <div tabindex="0" class="collapse collapse-plus bg-base-100 border-base-300 border">
+                            <div class="collapse-title font-semibold">Do you offer certificates for completed courses?
+                            </div>
+                            <div class="collapse-content text-sm">
+                                Yes, once you finish a structured course, you can receive a certificate of completion.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="modal-container"
+                    class=" hidden bg-gray-800/30 fixed top-0 left-0 inset-0 h-screen w-screen flex items-end justify-center md:items-center ">
+
+                    
+                </div>
+
+
+
+            </div>
+
+            <footer class="px-12 flex items-center justify-between py-24 bg-blue-50">
+                <div class="space-y-1">
+                    <div class="flex items-center justify-start space-x-4 mb-2">
+                        <img class="w-10" src="./assets/logo.png" alt="">
+                        <div class="flex flex-col items-baseline gap-0">
+                            <h2 class="text-xl font-semibold"> English Janala</h2>
+                            <span class="font-bangla text-xs"> by programming-hero </span>
+                        </div>
+                    </div>
+                    <p class=" text-xl font-bangla"> ইংরেজি শিখুন সহজে </p>
+                    <p class="text-sm text-gray-500"> Providing ED-Tech Applications since 2025</p>
+                </div>
+                <div>
+                    <p class="mb-2">FOLLOW US</p>
+                    <div class="text-xl flex  gap-2">
+                        <i class="ph-facebook-logo"></i>
+                        <i class="ph-youtube-logo"></i>
+                        <i class="ph-instagram-logo"></i>
+                        <i class="ph-linkedin-logo"></i>
+                    </div>
+                </div>
+            </footer>
+
+            <script src="./main.js"></script>
+    </body>
+
+</html>
